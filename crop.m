@@ -2,7 +2,7 @@ close all;
 clear global;
 clc;
 
-picture = imread("image8.jpg");
+%picture = imread("image8.jpg");
 picture_gray = rgb2gray(picture);
 subplot(3,3,1), imshow(picture_gray), title('1. gray');
 
@@ -50,5 +50,5 @@ yTop = picture_biggest_boundig_box(2);
 width = picture_biggest_boundig_box(3);
 height = picture_biggest_boundig_box(4);
 picture_biggest_boundig_box2 = [xLeft, yTop, width, height];
-crop = imcrop(picture_rotated, picture_biggest_boundig_box2);
-subplot(3,3,9), imshow(crop), title('9. crop');
+icrop = imcrop(picture_rotated, picture_biggest_boundig_box2);
+subplot(3,3,9), imshow(icrop), title('9. crop');
